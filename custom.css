@@ -1,0 +1,64 @@
+* {
+   font-family: helvetica; 
+   margin: 0px;
+}
+
+.container{
+    background-color : white;
+}
+
+header {
+    background-color : #f2f2f2;
+}
+
+li {
+    display : inline;
+    padding: 10px 20px;
+    text-align : right;
+    font-size: 12px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+hr {
+   border-bottom: 1px solid #ffffff;
+}
+
+nav {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+a {
+    color : #1c1c1c;
+    text-decoration: none;
+}
+
+
+
+
+
+.forecast {
+    margin: 0;
+    padding: .3rem;
+    background-color: #eee;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.forecast > h1,
+.day-forecast {
+    margin: .5rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+    margin: .2rem;
+    font-size: 1rem;
+}
+
+.day-forecast {
+    background: right/contain content-box border-box no-repeat
+        url('/breezy/downloads/XVWFx501.svg') white;
+}
