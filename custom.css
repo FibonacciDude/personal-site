@@ -1,0 +1,130 @@
+* {
+   font-family: helvetica; 
+   margin: 0px;
+}
+
+@font-face {
+    font-family: "cfont";
+    src: url(/home/breezy/Downloads/Colfax-Regular.otf);
+}
+
+p.cfont {
+    font-family: "cfont" !important;
+}
+
+.container{
+    background-color : white;
+}
+
+header {
+    background-color : #f2f2f2;
+}
+
+li {
+    display : inline;
+    padding: 10px 20px;
+    text-align : right;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+img {
+    float: right;    
+    display: inline;
+}
+
+h1{
+    font-family: roboto !important;
+}
+
+p {
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+hr {
+   border-bottom: 1px solid #ffffff;
+}
+
+nav {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+div {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+div.header {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.post-card-tags {
+    color: gray !important;
+    font-weight: thin;
+}
+
+a {
+    color : #1c1c1c;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a.post-card-tag {
+    color: grey;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: helvetica;
+}
+
+.mb-1\.5 { 
+    margin-bottom: 2.1rem !important;
+}
+
+.mb-0\.75, .my-0\.75 {
+    margin-bottom: 1.05rem !important;
+}
+.medium-xsmall-copy {
+    font-family: helvetica;
+    font-size: .8333333333rem;
+    font-weight: unset;
+    letter-spacing: unset;
+}
+.mb-1\/12 {
+    margin-bottom: 0.1166666667rem !important;
+}
+
+
+.color-fg-50{
+    color: gray;
+    font-weight: thin;
+}
+
+h2,h3{
+    font-weight: 500 !important;
+    color : #1c1c1c;
+}
+
+ul {
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+body {
+    line-height: 1.4;
+    word-wrap: break-word;
+}
