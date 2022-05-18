@@ -1,14 +1,14 @@
 * {
-   font-family: helvetica; 
+   font-family: "cfont"; 
    margin: 0px;
 }
 
 @font-face {
     font-family: "cfont";
-    src: url(/home/breezy/Downloads/Colfax-Regular.otf);
+    src: url(ext/Colfax-Regular.otf);
 }
 
-p.cfont {
+.cfont {
     font-family: "cfont" !important;
 }
 
@@ -32,10 +32,8 @@ li {
 img {
     float: right;    
     display: inline;
-}
-
-h1{
-    font-family: roboto !important;
+    padding-right: 2%;
+    position: sticky;
 }
 
 p {
@@ -50,22 +48,29 @@ hr {
 
 nav {
     text-align: right;
-    padding: 10px 20px;
+    padding: 3% 3%;
 }
 
 div {
-    padding-left: 30px;
-    padding-right: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block;
+    vertical-align: baseline;
 }
 
 div.header {
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .post-card-tags {
     color: gray !important;
     font-weight: thin;
+}
+
+.excerpt {
+   width: 400px;
+   height: 100px;
 }
 
 a {
@@ -80,7 +85,6 @@ a.post-card-tag {
 
 h1 {
     font-weight: normal;
-    font-family: helvetica;
 }
 
 .mb-1\.5 { 
