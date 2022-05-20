@@ -50,6 +50,7 @@
 	    </div>
     </div>
 
+<!--
     <div id="tag-buffer">
     </div>
 
@@ -57,19 +58,18 @@
 		var iframe;
 		function rend(){
 			iframe = document.getElementById('iframe');
-			document.write(iframe.contentWindow);
-			<!--document.write("<pre>" + iframe.contentWindow.document.documentElement.outerHTML.replace(/</g,"&lt;") + "</pre>")-->
+			document.write("<pre>" + iframe.contentWindow.document.documentElement.outerHTML.replace(/</g,"&lt;") + "</pre>")
 			var innerDoc = (iframe.contentDocument) 
 			       ? iframe.contentDocument
 			       : iframe.contentWindow.document;
 			var el = innerDoc.getElementById("blog-content");
-			document.getElementById("tag-buffer").innerHTML = "words";
+			document.getElementById("tag-buffer").innerHTML = tag_specific;
 			document.write("<pre>" + el.innerHTML.replace(/</g,"&lt;") + "</pre>")
 		}
 	</script>
 
     <iframe src="../../blog.html" id="iframe" onload="rend()"  style="display:none">
-    </iframe>
+    </iframe>-->
 
 	<!--<script>
 		tag_specific = "";
