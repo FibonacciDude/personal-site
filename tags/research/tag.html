@@ -28,7 +28,7 @@
     </div>
 
     <div>
-	    <div class="mb-1.5 medium-xsmall-copy">
+	    <div class="mb-1.5 medium-xsmall-copy tag-research">
 	      <h3><a href="../../emg-hard/post.html">On the Hardness of sEMG</a></h3>
 		<a href="../../emg-hard/post.html" class="color-fg-50">
 		  <time datetime="2022-04-19">April 19, 2022</time>
@@ -38,7 +38,7 @@
 		  </ul>
 	    </div>
 
-	    <div class="mb-1.5 medium-xsmall-copy">
+	    <div class="mb-1.5 medium-xsmall-copy tag-research tag-optimization">
 	      <h3><a href="../../joint-opt/post.html">Joint Optimization</a></h3>
 		<a href="../../joint-opt/post.html" class="color-fg-50">
 		  <time datetime="2022-04-06">April 6, 2022</time>
@@ -49,6 +49,38 @@
 		  </ul>
 	    </div>
     </div>
+
+    <div id="tag-buffer">
+    </div>
+
+	<script type="text/javascript">
+		var iframe;
+		function rend(){
+			iframe = document.getElementById('iframe');
+			document.write(iframe.contentWindow);
+			<!--document.write("<pre>" + iframe.contentWindow.document.documentElement.outerHTML.replace(/</g,"&lt;") + "</pre>")-->
+			var innerDoc = (iframe.contentDocument) 
+			       ? iframe.contentDocument
+			       : iframe.contentWindow.document;
+			var el = innerDoc.getElementById("blog-content");
+			document.getElementById("tag-buffer").innerHTML = "words";
+			document.write("<pre>" + el.innerHTML.replace(/</g,"&lt;") + "</pre>")
+		}
+	</script>
+
+    <iframe src="../../blog.html" id="iframe" onload="rend()"  style="display:none">
+    </iframe>
+
+	<!--<script>
+		tag_specific = "";
+		var children = el.children;
+		for (var i=0; i<children.length; i++){
+			if (children.classList.contains("tag-research")) {
+				tag_specific += children.outerHTML;
+			}
+		}
+		document.getElementById("tag-buffer").innerHTML = tag_specific;
+	</script>-->
 
 </body>
 
