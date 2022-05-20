@@ -39,6 +39,19 @@
 	    </div>
     </div>
 
+   <script>
+	<!--We can get the innerHTML and output it, how about we use the blog.html markup, check for tag in each one (subelement) and then output it (as normal). Then, for the posts, within the tags, change the hrefs recursively to append "../.." -->
+
+	<!--That doesn't solve the problem of needing to manually put the individual blog (little block), create the folder with post.html, and creation of new tags on the fly.-->
+
+	<!--How to get it from another file-->
+
+	let el = document.getElementById("blog-content");
+	document.write("<pre>" + el.innerHTML.replace(/</g,"&lt;") + "</pre>")
+	document.write(el.childElementCount)
+
+   </script>
+
 </body>
 
 </html>
