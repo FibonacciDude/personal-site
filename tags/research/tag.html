@@ -4,6 +4,10 @@
 <head>
     <link rel="stylesheet" href="../../custom.css">
     <title>Blog</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+	   $("#tag-buffer").load( '../../blog.html' );
+    </script>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
         <a href="../../index.html">Home</a>
         </li>
         <li class="ml-sm-1.75" style="margin-top:0.5px">
-        <a href="../../research.html">Research</a>
+        <a href="../../activity.html">Activity</a>
         </li>
         <li class="ml-sm-1.75" style="margin-top:0.5px">
         <a href="../../blog.html"><b>Blog</b></a>
@@ -50,37 +54,35 @@
 	    </div>
     </div>
 
-<!--
     <div id="tag-buffer">
     </div>
 
-	<script type="text/javascript">
-		var iframe;
-		function rend(){
-			iframe = document.getElementById('iframe');
-			document.write("<pre>" + iframe.contentWindow.document.documentElement.outerHTML.replace(/</g,"&lt;") + "</pre>")
-			var innerDoc = (iframe.contentDocument) 
-			       ? iframe.contentDocument
-			       : iframe.contentWindow.document;
-			var el = innerDoc.getElementById("blog-content");
-			document.getElementById("tag-buffer").innerHTML = tag_specific;
-			document.write("<pre>" + el.innerHTML.replace(/</g,"&lt;") + "</pre>")
-		}
-	</script>
-
-    <iframe src="../../blog.html" id="iframe" onload="rend()"  style="display:none">
-    </iframe>-->
 
 	<!--<script>
-		tag_specific = "";
-		var children = el.children;
-		for (var i=0; i<children.length; i++){
-			if (children.classList.contains("tag-research")) {
-				tag_specific += children.outerHTML;
+		var el;
+		var buffer = document.getElementById("tag-buffer");
+		function rend(){
+			iframe = document.getElementById('iframe');
+			var innerDoc =  ( iframe.contentWindow || iframe.contentDocument ).document;
+			buffer.innerHTML = "Injecting";
+			el = innerDoc.getElementById("blog-content");
+
+
+			tag_specific = "<div>";
+			var children = el.children;
+			for (var i=0; i<children.length; i++){
+				if (children.classList.contains("tag-research")) {
+					tag_specific += children.outerHTML;
+				}
 			}
+			tag_specific += "</div>";
+			document.getElementById("tag-buffer").innerHTML = tag_specific;
+
 		}
-		document.getElementById("tag-buffer").innerHTML = tag_specific;
 	</script>-->
+
+    <iframe src="../../blog.html" id="iframe" onload="rend()"  style="display:none">
+    </iframe>
 
 </body>
 
